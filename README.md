@@ -1,2 +1,2 @@
-[index](https://YuskEg.github.io/dist/index.html)  -  Main
+[LenniArt Final](https://YuskEg.github.io/dist/index.html)
 
