@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    @@include('blocks/head.html')
-  </head>
-
+  @@include('blocks/head.html')
+  
   <body class="body">
     @@include('blocks/page-header.html')
+
+    <button type="button" class="up-down-btn up-down-btn--down" id="js-upDownBtn"></button>
     
     <main class="main">
-      <div class="conteiner">
-        <section class="descriptive">
-          <p class="descriptive__title-over">
-            арт — пространство
+      <div class="home">
+        <header class="main-header home__main-header">
+          <h1 class="main-header__title">Арт — пространство</h1>
+          <picture class="main-header__picture">
+            <source type="image/webp" srcset="assets/images/lenni.webp">
+
+            <img src="assets/images/lenni.png" alt="lenni" class="main-header__img">
+          </picture>
+          <p class="main-header__text">
+            Для людей, горящих сердцем и делом <br>место для настоящего
           </p>
-          <img src="assets/images/LENNI.svg" alt="" class="descriptive__image">
-          <p class="descriptive__title-under">
-            для людей, горящих сердцем и делом место для настоящего
-          </p>
-        </section>
-        <section class="choice">
-          <h3 class="choice__title">я хочу:</h>
-          <div class="choice__btn-list">
-            <button type="button" class="btn-red btn__choice">Провести мероприятие</button>
-            <button type="button" class="btn btn__choice btn__choice-right">Стать арендатором</button>
-          </div>
-        </section>
-        @@include('blocks/about.html')
+        </header>
+
+        @@include('blocks/offers.html', { "class": "home__offers" })
+
+        @@include('blocks/about.html', { "class": "home__about" })
+
+        @@include('blocks/upcoming.html', { class: "home__upcoming" })
+
+        @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
+
+        @@include('blocks/contacts.html', { "class": "home__contacts" })
+        
+        <div class="quote home__quote">
+          <span class="quote__first-part">Просто делайте,</span>
+          <span class="quote__second-part">что нравится,</span>
+          <span class="quote__third-part">а мы вам поможем</span>
+        </div>
       </div>
-      @@include('events.html')
     </main>
+    
+    @@include('blocks/page-footer.html')
+
     @@include('blocks/event-pp.html')
+
+    <script src="https://api-maps.yandex.ru/v3/?lang=ru_RU&apikey=241f717f-c4d7-4209-b383-7144bea54fda"></script>
+
+    <script src="scripts/jquery.selectric.min.js"></script>
+    <script src="scripts/jquery.mask.min.js"></script>
+
+    <script src="scripts/air-datepicker.js"></script>
+    <script src="scripts/swiper.min.js"></script>
+    
+    <script src="scripts/event-pp-handle.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

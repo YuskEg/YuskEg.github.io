@@ -1,18 +1,33 @@
 {
-  "name": "course_front",
+  "name": "slowertk.github.io",
   "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlowerTK/SlowerTK.github.io.git"
+  },
+  "keywords": [
+    "lenny"
+  ],
+  "author": "Антон Кадочников",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SlowerTK/SlowerTK.github.io/issues"
+  },
+  "homepage": "https://github.com/SlowerTK/SlowerTK.github.io#readme",
   "description": "course junior frontend-developer",
-  "author": "si@tagree.ru",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^5.0.0",
     "gulp-csso": "^4.0.1",
+    "gulp-debug": "^5.0.1",
     "gulp-file-include": "^2.3.0",
-    "gulp-format-html": "^1.5.2",
+    "gulp-format-html": "^1.2.5",
     "gulp-imagemin": "^8.0.0",
     "gulp-less": "^5.0.0",
+    "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",

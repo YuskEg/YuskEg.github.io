@@ -1,54 +1,53 @@
 .radio {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  
-  &__item {
-    box-sizing: border-box;
+  justify-content: space-between;
+  height: 137px;
+
+  &__label {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 15px;
+    display: block;
+    box-sizing: border-box;
     min-height: 23px;
-    padding-left: 23px;
-    color: @black;
+    padding-left: 26px;
     cursor: pointer;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
-  
+
   &__input {
-    .is-hidden;
+    .is-hidden();
 
     &:checked {
-      &~.radio__mark {
+      & ~ .radio__mark {
         background-color: @black;
       }
     }
   }
 
   &__mark {
-    box-sizing: border-box;
-    display: block;
     position: absolute;
+    box-sizing: border-box;
     left: 0;
     top: 0;
     width: 23px;
     height: 23px;
+    margin-left: 3px;
+    padding: 3px;
     border: 2px solid @black;
     border-radius: 50%;
-    padding: 3px;
-    background-clip: content-box;
     background-color: transparent;
+    background-clip: content-box;
     transition: background-color 0.2s;
   }
 
-  &__label {
-    margin-left: 20px;
+  &__name {
+    display: block;
+    margin-left: 23px;
+    font-family: @font1;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
   }
 }
